@@ -22,7 +22,7 @@ jobs:
     steps:
       - checkout
       - attach_workspace:
-          at: /tmp/output.txt
+          at: /output.txt
 
       - run: cat output.txt
   print-my-name:
