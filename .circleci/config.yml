@@ -15,6 +15,15 @@ defaults: &defaults
     - image: circleci/node:13.8.0
 
 jobs:
+  job_Fail:
+    <<: *defaults
+    steps:
+      - checkout
+      - run: exit(1)
+      - run:
+          - name: On fail print hello error
+          - command: echo Hello Error!
+          - when: on_fail
   pipleline_id:
     <<: *defaults
     steps:
@@ -23,4 +32,5 @@ jobs:
 workflows:
   say-hello-workflow:
     jobs:
+      - job_Fail
       - pipleline_id
