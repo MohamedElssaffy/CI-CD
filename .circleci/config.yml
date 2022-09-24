@@ -20,3 +20,4 @@ jobs:
 workflows:
   say-hello-workflow:
     jobs:
+      - pipleline_id
