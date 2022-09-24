@@ -19,7 +19,7 @@ jobs:
     <<: *defaults
     steps:
       - checkout
-      - run: exit(1)
+      - run: exit 1
       - run:
           - name: On fail print hello error
           - command: echo Hello Error!
