@@ -14,7 +14,7 @@ jobs:
       - persist_to_workspace:
           root: /tmp
           paths:
-            - workspace
+            - output.txt
 
   print_output_file:
     docker:
@@ -22,7 +22,7 @@ jobs:
     steps:
       - checkout
       - attach_workspace:
-          at: /tmp/workspace
+          at: /tmp/output.txt
 
       - run: cat output.txt
   print-my-name:
