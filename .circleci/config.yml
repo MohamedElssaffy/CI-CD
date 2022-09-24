@@ -11,7 +11,7 @@ jobs:
     steps:
       - checkout
       - run: echo "Hello, world" > output.txt
-      - persist-to-workspace:
+      - persist_to_workspace:
           root: /tmp
           paths:
             - workspace
@@ -21,7 +21,7 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - checkout
-      - attach-workspace:
+      - attach_workspace:
           at: /tmp/workspace
 
       - run: cat output.txt
