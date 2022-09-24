@@ -18,7 +18,7 @@ jobs:
   job_Fail:
     <<: *defaults
     steps:
-      - checkout
+      # - checkout
       - run: exit 1
       - run:
           - name: On fail print hello error
