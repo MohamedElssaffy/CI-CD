@@ -11,7 +11,7 @@ jobs:
     steps:
       - checkout
       - run: echo "Hello, world" > output.txt
-      - presist-to-workspace:
+      - persist-to-workspace:
           root: /tmp
           paths:
             - workspace
